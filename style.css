@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+body{
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-image:linear-gradient(60deg,black 60%,rgb(0, 0, 20), rgb(0,0,25),rgb(0,0,30))
+}
+
+#ttl{
+   color: white;
+   justify-content: center;
+   align-items:center;
+   display: grid;
+   position: absolute;
+   bottom: 90vh;
+   font-family: Poppins, sans-serif;
+   text-shadow: 1px 1px rgb(5, 105, 255);
+}
+
+.slider{
+   margin: 0 auto;
+   width: 1000px;
+   height: 400px;
+   overflow: hidden;
+}
+
+.slides{
+   width: 400%;
+   height: 400px;
+   display: flex;
+}
+
+.slides input{
+   display: none;
+}
+
+.slide{
+   width: 25%;
+   position: relative;
+   transition: 2s;
+}
+
+.slide img {
+   width: 1000px;
+}
+
+.manual-navigation{
+   position: absolute;
+   width: 1000px;
+   margin-top: -40px;
+   display: flex;
+   justify-content: center;
+}
+
+.manual-btn{
+   border: 1px solid #fff;
+   padding: 5px;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+   margin-right: 40px;
+}
+
+.manual-btn:hover{
+   background-color: rgb(5, 105, 255);
+}
+
+#radio1:checked ~.first{
+   margin-left: 0;
+}
+
+#radio2:checked ~.first{
+   margin-left: -25%;
+}
+
+#radio3:checked ~.first{
+   margin-left:-50%;
+}
+
+.navigation-auto div{
+   border: 1px solid #20a6ff;
+   padding: 5px;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: 1s;
+}
+
+.navigation-auto{
+   position: absolute;
+   width: 1000px;
+   margin-top: 360px;
+   display: flex;
+   justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+   background-color: rgb(5, 105, 255);
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+   background-color: rgb(5, 105, 255);
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+   background-color: rgb(5, 105, 255);
+}
